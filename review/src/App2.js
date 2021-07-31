@@ -1,9 +1,26 @@
 import React from 'react';
 
-const Person = () =>{
-    
-};
-class App2 extends React.Component{
+// const Person = (props) => {
+//     console.log(props);
+//     return (
+//         <div>
+//             <h1>Hello {props.name}.</h1>
+//             <h1>Hello {props.age}.</h1>
+//         </div>
+//     )
+// };
+
+class Person extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>Hello {this.props.name}.</h1>
+                <h1>Hello {this.props.age}.</h1>
+            </div>
+        )
+    }
+}
+class App2 extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -25,10 +42,11 @@ class App2 extends React.Component{
 
     render() {
         const name = "Rick"
-        return(
+        return (
             <div>
-                <h1>Hello {this.state.name}.</h1>
-                <h1>Hello {this.state.age}.</h1>
+                <Person name={this.state.name} age={this.state.age} />
+                {/* <h1>Hello {this.state.name}.</h1>
+                <h1>Hello {this.state.age}.</h1> */}
                 <button onClick={this.handleClick}>Change the name</button>
             </div>
         );
