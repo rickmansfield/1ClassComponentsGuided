@@ -66,18 +66,40 @@ toggleItem = id => {
   })
 }
 
+addItem = name =>{
+  //doe state stuff here
+  console.log("App: ", name);
+  const newItem = {
+    name: name,
+    id: Date.now(),
+    purchased: false
+  }
+  this.setState({
+    ...this.state,
+    groceries: [...this.state.groceries, newItem]
+  });
+}
+
+
+clearPurchased = () => {
+
+}
+
+
 render() {
   return (
     <div className="App">
       <div className="header">
         <h1>Shopping List</h1>
-        <ListForm />
+        <ListForm addItem={this.addItem}/>
       </div>
-      <GroceryList toggleItem={this.toggleItem} groceries={this.state.groceries} />
+      <GroceryList clearPurchased={this.clearPurchased}toggleItem={this.toggleItem} groceries={this.state.groceries} />
     </div>
   );
 }
 }
+
+
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
