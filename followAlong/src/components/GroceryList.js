@@ -7,6 +7,8 @@ const GroceryList = props => {
   // const sortedList = props.groceries.sort((a, b) => a.purchased - b.purchased);
   const handleClick = () => {
 console.log('click');
+props.clearPurchased();
+console.log('App: Connected');
   }
   return (
     <div className="shopping-list">

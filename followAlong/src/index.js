@@ -78,15 +78,22 @@ addItem = name =>{
     ...this.state,
     groceries: [...this.state.groceries, newItem]
   });
-}
-
+} //returns existing groceries plus new item. 
 
 clearPurchased = () => {
+  this.setState({
+    ...this.setState,
+    groceries: this.state.groceries.filter(items => {
+      return items.purchased === false
+    })
+  })
 
-}
+}//returns the list less the purchased items
+//or all the items with purchased === false
 
 
 render() {
+  console.log(this.state.groceries);
   return (
     <div className="App">
       <div className="header">
