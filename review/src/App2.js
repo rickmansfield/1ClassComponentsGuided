@@ -1,5 +1,8 @@
 import React from 'react';
 
+const Person = () =>{
+    
+};
 class App2 extends React.Component{
     constructor() {
         super();
