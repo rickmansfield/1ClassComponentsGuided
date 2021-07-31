@@ -38,27 +38,27 @@ const groceries = [
   }
 ];
 
-// class App extends React.Component {
-//   // Constructor with state
-//   constructor() {
-//     super();
-//     this.state = {
-//       groceries:groceries
-//     }
-//   }
-
-  // Class methods to update state
-  render() {
-    return (
-      <div className="App">
-        <div className="header">
-           <h1>Shopping List</h1>
-           <ListForm />
-         </div>
-        <GroceryList groceries={groceries} />
-       </div>
-    );
+class App extends React.Component {
+  // Constructor with state
+  constructor() {
+    super();
+    this.state = {
+      groceries:groceries
+    }
   }
+
+// Class methods to update state
+render() {
+  return (
+    <div className="App">
+      <div className="header">
+        <h1>Shopping List</h1>
+        <ListForm />
+      </div>
+      <GroceryList groceries={this.state.groceries} />
+    </div>
+  );
+}
 }
 
 const rootElement = document.getElementById('root');
