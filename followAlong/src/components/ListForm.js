@@ -25,7 +25,7 @@ class ListForm extends React.Component {
   }
 
   render() {
-    console.log(this.state.input);
+    // console.log(this.state.input);
     return (
       <form onSubmit={this.handleSubmit}>
         {/* This is an uncontrolled component 😬 We want it to be controlled by state */}

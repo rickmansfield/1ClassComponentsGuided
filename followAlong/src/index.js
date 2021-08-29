@@ -47,29 +47,9 @@ class App extends React.Component {
     }
   }
 
-// Class methods to update state
-toggleItem = id => {
-  console.log("App:", id);
-  //set state for groceries with id's purchased flipped
-  this.setState({
-    ...this.state.groceries,
-    groceries: this.state.groceries.map(item =>{
-      if (item.id === id){
-        return({
-          ...item,
-          //purchased item.purchased ? false : true
-          purchased: !item.purchased// this does the same thing. 
-        })
-      } else {
-        return item
-      }
-    })
-  })
-}
-
 addItem = name =>{
-  //doe state stuff here
-  console.log("App: ", name);
+  //do state stuff here
+  // console.log("App: ", name);
   const newItem = {
     name: name,
     id: Date.now(),
@@ -92,9 +72,28 @@ clearPurchased = () => {
 }//returns the list less the purchased items
 //or all the items with purchased === false
 
+// Class methods to update state
+toggleItem = id => {
+  console.log("App:", id);
+  //set state for groceries with id's purchased flipped
+  this.setState({
+    ...this.state.groceries,
+    groceries: this.state.groceries.map(item =>{
+      if (item.id === id){
+        return({
+          ...item,
+          //purchased item.purchased ? false : true
+          purchased: !item.purchased// this does the same thing. 
+        })
+      } else {
+        return item
+      }
+    })
+  })
+}
 
 render() {
-  console.log(this.state.groceries);
+  console.log("this.state.groceries index.js",this.state.groceries);
   return (
     <div className="App">
       <div className="header">
