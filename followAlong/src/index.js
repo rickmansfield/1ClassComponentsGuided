@@ -57,7 +57,8 @@ toggleItem = id => {
       if (item.id === id){
         return({
           ...item,
-          purchased: !item.purchased
+          //purchased item.purchased ? false : true
+          purchased: !item.purchased// this does the same thing. 
         })
       } else {
         return item

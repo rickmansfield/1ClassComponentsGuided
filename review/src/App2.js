@@ -18,7 +18,7 @@ class Person extends React.Component {
         return (
             <div>
                 <h1>Hello {this.props.name}.</h1>
-                <h1>Hello {this.props.age}.</h1>
+                <h1>You are {this.props.age}.</h1>
             </div>
         )
     }
