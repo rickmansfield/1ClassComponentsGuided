@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Functional Component Alternative
+
 // const Person = (props) => {
 //     console.log(props);
 //     return (
@@ -10,6 +12,7 @@ import React from 'react';
 //     )
 // };
 
+//Class Component Alternative to do the same thing
 class Person extends React.Component {
     render() {
         return (
