@@ -13,7 +13,7 @@ const Item = props => {
     // console.log('Click gives a:', props.item.name);
     // //change purchased state to "true"
     // setItem({
-    //   ...item, purchased: 
+    //   ...item, purchased: true
     //   // could use (item.purchased === false) ? true : false 
     //   //could use item.purchased ? false : true
     //   !item.purchased //this is just more concise
